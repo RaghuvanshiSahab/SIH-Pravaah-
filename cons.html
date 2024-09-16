@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groundwater Farming Simulation</title>
+    <style>
+        /* style.css */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #00796b;
+        }
+
+        .game-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .groundwater h2 {
+            color: #00796b;
+        }
+
+        .farm-fields {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .field {
+            width: 100px;
+            height: 100px;
+            background-color: #c8e6c9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #4caf50;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button:disabled {
+            background-color: #c8e6c9;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Farming Guardians</h1>
+    <div class="game-container">
+        <div class="groundwater">
+            <h2>Groundwater Level: <span id="water-level">100%</span></h2>
+            <progress id="water-progress" value="100" max="100"></progress>
+        </div>
+
+        <div class="farm-fields">
+            <h3>Your Crops</h3>
+            <div class="field" id="field1">Plant Crop</div>
+            <div class="field" id="field2">Plant Crop</div>
+            <div class="field" id="field3">Plant Crop</div>
+        </div>
+
+        <div class="controls">
+            <button id="water-all">Water All Crops</button>
+            <button id="next-day">Next Day</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
